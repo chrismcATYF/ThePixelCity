@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.5.1)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire`)
+  - AlamofireImage (from `https://github.com/Alamofire/AlamofireImage`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire
+  AlamofireImage:
+    :git: https://github.com/Alamofire/AlamofireImage
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: b8995447518fd57af14c88a47f27434a16f60403
+    :git: https://github.com/Alamofire/Alamofire
+  AlamofireImage:
+    :commit: c7cf04f7e597f5344e97e39d39fa99ffbd87fe91
+    :git: https://github.com/Alamofire/AlamofireImage
+
+SPEC CHECKSUMS:
+  Alamofire: 0224236301daac8c6578172706304b66b48236b5
+  AlamofireImage: 4e0cba538743dc2e36cdb5eb5e057a722560769d
+
+PODFILE CHECKSUM: b10ea63ef30d87b9e7e777affd8212ab87bf4cce
+
+COCOAPODS: 1.2.0
