@@ -38,7 +38,8 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.delegate = self
         locationManager.delegate = self
         configureLocationServices()
-        addDoubleTap()
+        addTripleTap()
+        zoom()
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
         collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
@@ -51,17 +52,21 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         pullUpView.addSubview(collectionView!)
     }
     
-    func addDoubleTap() {
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(_:)))
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.delegate = self
-        mapView.addGestureRecognizer(doubleTap)
+    func addTripleTap() {
+        let tripleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(_:)))
+        tripleTap.numberOfTapsRequired = 3
+        tripleTap.delegate = self
+        mapView.addGestureRecognizer(tripleTap)
     }
     
     func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
         swipe.direction = .down
         pullUpView.addGestureRecognizer(swipe)
+    }
+    
+    func zoom() {
+        mapView.isZoomEnabled = true
     }
 
     func animateViewUp() {
