@@ -38,7 +38,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.delegate = self
         locationManager.delegate = self
         configureLocationServices()
-        addTripleTap()
+        addSingleTap()
         zoom()
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
@@ -52,11 +52,11 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         pullUpView.addSubview(collectionView!)
     }
     
-    func addTripleTap() {
-        let tripleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(_:)))
-        tripleTap.numberOfTapsRequired = 3
-        tripleTap.delegate = self
-        mapView.addGestureRecognizer(tripleTap)
+    func addSingleTap() {
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(_:)))
+        singleTap.numberOfTapsRequired = 1
+        singleTap.delegate = self
+        mapView.addGestureRecognizer(singleTap)
     }
     
     func addSwipe() {
@@ -128,7 +128,7 @@ extension MapVC: MKMapViewDelegate {
         }
         
         let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "DroppablePin")
-        pinAnnotation.pinTintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        pinAnnotation.pinTintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         pinAnnotation.animatesDrop = true
         return pinAnnotation
     }

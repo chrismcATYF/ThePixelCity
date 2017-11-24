@@ -33,8 +33,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo0-jV-t5m">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triple-tap to drop a pin and view photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-hp-KAV">
-                                        <rect key="frame" x="39.5" y="24" width="296.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to drop a pin and view photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-hp-KAV">
+                                        <rect key="frame" x="61.5" y="24" width="252.5" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="h0I-zU-2aw"/>
                                         </constraints>
@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1427182581731605" green="0.68687481928170691" blue="0.88939393585827686" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="VAd-hp-KAV" firstAttribute="centerY" secondItem="Eo0-jV-t5m" secondAttribute="centerY" id="8ny-7Y-zAO"/>
                                     <constraint firstAttribute="height" constant="70" id="NQF-6Q-IOA"/>
@@ -57,13 +57,14 @@
                                     <constraint firstAttribute="height" constant="1" id="Spw-Vx-XYu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffn-eD-XAe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffn-eD-XAe" customClass="CircleBtn" customModule="Pixel_City" customModuleProvider="target">
                                 <rect key="frame" x="309" y="596" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.1427182582" green="0.68687481930000005" blue="0.88939393590000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="0uN-Wo-H25"/>
                                     <constraint firstAttribute="height" constant="50" id="mFz-kH-3bk"/>
                                 </constraints>
-                                <state key="normal" image="locationButton"/>
+                                <state key="normal" image="Locator"/>
                                 <connections>
                                     <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQZ-ma-gix"/>
                                 </connections>
@@ -107,8 +108,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-hm-vu2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-hm-vu2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-js-69b">
                                 <rect key="frame" x="87" y="622" width="200" height="25"/>
@@ -120,7 +122,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1427182582" green="0.68687481930000005" blue="0.88939393590000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6OB-do-hKg"/>
                                     <constraint firstItem="SDG-Re-MC9" firstAttribute="centerY" secondItem="eEJ-js-69b" secondAttribute="centerY" id="Db8-Y2-2vj"/>
@@ -149,6 +151,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="locationButton" width="67" height="67"/>
+        <image name="Locator" width="36" height="27"/>
     </resources>
 </document>
